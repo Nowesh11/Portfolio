@@ -9,6 +9,7 @@ export interface IProject extends Document {
   image: string;
   imageType: string;
   featured: boolean;
+  isPrivate: boolean;
   order: number;
   createdAt: Date;
 }
@@ -23,6 +24,7 @@ const ProjectSchema = new Schema<IProject>(
     image: { type: String, default: '' },
     imageType: { type: String, default: 'image/jpeg' },
     featured: { type: Boolean, default: false },
+    isPrivate: { type: Boolean, default: false },
     order: { type: Number, default: 0 },
   },
   { timestamps: true }
